@@ -21,6 +21,8 @@ jobs:
 
     - name: Update my deps-sensor
       uses: docker://matsubara0507/deps-sensor:latest
+      env:
+        GH_TOKEN: ${{ github.token }}
       with:
         entrypoint: /bin/bash
         args: .github/scripts/update.bash
