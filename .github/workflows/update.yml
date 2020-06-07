@@ -1,0 +1,33 @@
+name: Update my deps-sensor page
+on:
+  schedule:
+  - cron:  '0 10 * * *'
+  push:
+    branches:
+    - master
+    paths-ignore:
+    - 'docs/**'
+    - 'README.md'
+    - '.gitignore'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.2.0
+      with:
+        ref: master
+
+    - name: Update my deps-sensor
+      uses: docker://matsubara0507/deps-sensor:latest
+      run: |
+        deps-sensor --generate docs
+        deps-sensor --json > docs/static/info.json
+
+    - name: Push changes
+      run: |
+        git status
+        git add docs
+        git diff --staged --quiet || git commit -m "[skip ci] Update docs by deps-sensor"
+        git push origin master
