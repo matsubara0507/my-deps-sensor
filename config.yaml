@@ -18,4 +18,6 @@ repositories:
 - matsubara0507/dhall-ex
 - matsubara0507/drone-haskell
 - matsubara0507/whoami
+- matsubara0507/octkey
+- matsubara0507/octbook
 - haskell-jp/antenna
