@@ -1,0 +1,21 @@
+repositories:
+- matsubara0507/repomoving
+- matsubara0507/deps-sensor
+- matsubara0507/extensible-ext
+- matsubara0507/slackell
+- matsubara0507/elmap.hs
+- matsubara0507/fallible
+- matsubara0507/mixlogue
+- matsubara0507/mix.hs
+- matsubara0507/selfcat
+- matsubara0507/git-plantation
+- matsubara0507/anaqram-server
+- matsubara0507/scrapbook
+- matsubara0507/dockwright
+- matsubara0507/stack-tpls
+- matsubara0507/mdium
+- matsubara0507/yaml-to-dhall
+- matsubara0507/dhall-ex
+- matsubara0507/drone-haskell
+- matsubara0507/whoami
+- haskell-jp/antenna
