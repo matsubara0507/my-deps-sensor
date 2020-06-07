@@ -21,9 +21,9 @@ jobs:
 
     - name: Update my deps-sensor
       uses: docker://matsubara0507/deps-sensor:latest
-      run: |
-        deps-sensor --generate docs
-        deps-sensor --json > docs/static/info.json
+      with:
+        entrypoint: /bin/bash
+        args: .github/scripts/update.bash
 
     - name: Push changes
       run: |
