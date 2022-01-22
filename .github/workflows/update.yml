@@ -12,17 +12,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.2.0
+      uses: actions/checkout@v2
       with:
         ref: master
 
     - name: Update my deps-sensor
-      uses: docker://matsubara0507/deps-sensor:latest
+      uses: docker://ghcr.io/matsubara0507/deps-sensor:latest
       env:
-        GH_TOKEN: ${{ github.token }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         entrypoint: /bin/bash
         args: .github/scripts/update.bash
