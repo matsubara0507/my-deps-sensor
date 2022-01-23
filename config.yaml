@@ -1,4 +1,9 @@
 repositories:
+- matsubara0507/salary-graph
+- matsubara0507/homelyapp
+- matsubara0507/hazell
+- matsubara0507/ghoauth
+- matsubara0507/hamler-dockerfile-creator
 - matsubara0507/watson.hs
 - matsubara0507/repomoving
 - matsubara0507/deps-sensor
